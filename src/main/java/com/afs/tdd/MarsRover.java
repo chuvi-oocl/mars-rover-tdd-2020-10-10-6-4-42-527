@@ -25,6 +25,9 @@ public class MarsRover {
         if (direction.equals("N")) {
             this.coordinateY++;
         }
+        else if (direction.equals("S")){
+            this.coordinateY--;
+        }
     }
 
     public int getCoordinateX() {
