@@ -116,4 +116,19 @@ class DemoTest {
         assertEquals(marsRover.getCoordinateY(), 0);
         assertEquals(marsRover.getDirection(), "S");
     }
+
+
+    @Test
+    void should_return_0_0_E_when_run_instructions_given_0_0_N_R() {
+
+        //given
+        String instructions = "R";
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+        //when
+        marsRover.runInstructions(instructions);
+        //then
+        assertEquals(marsRover.getCoordinateX(), 0);
+        assertEquals(marsRover.getCoordinateY(), 0);
+        assertEquals(marsRover.getDirection(), "E");
+    }
 }
