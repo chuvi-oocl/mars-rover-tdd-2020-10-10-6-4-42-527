@@ -22,11 +22,16 @@ public class MarsRover {
     }
 
     private void move() {
-        if (direction.equals("N")) {
-            this.coordinateY++;
-        }
-        else if (direction.equals("S")){
-            this.coordinateY--;
+        switch (direction) {
+            case "N":
+                this.coordinateY++;
+                break;
+            case "S":
+                this.coordinateY--;
+                break;
+            case "E":
+                this.coordinateX++;
+                break;
         }
     }
 
