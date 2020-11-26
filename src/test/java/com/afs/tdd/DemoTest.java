@@ -24,12 +24,12 @@ class DemoTest {
 
         //given
         String instructions = "M";
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover(0, 0, "S");
         //when
         marsRover.runInstructions(instructions);
         //then
         assertEquals(marsRover.getCoordinateX(), 0);
         assertEquals(marsRover.getCoordinateY(), -1);
-        assertEquals(marsRover.getDirection(), "N");
+        assertEquals(marsRover.getDirection(), "S");
     }
 }
