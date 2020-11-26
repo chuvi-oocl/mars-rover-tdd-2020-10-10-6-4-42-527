@@ -36,6 +36,9 @@ public class MarsRover {
             case "E":
                 this.direction = "S";
                 break;
+            case "W":
+                this.direction = "N";
+                break;
         }
     }
 
