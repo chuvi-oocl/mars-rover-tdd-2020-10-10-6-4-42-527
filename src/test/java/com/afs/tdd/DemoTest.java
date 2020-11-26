@@ -108,7 +108,7 @@ class DemoTest {
 
         //given
         String instructions = "L";
-        MarsRover marsRover = new MarsRover(0, 0, "w");
+        MarsRover marsRover = new MarsRover(0, 0, "W");
         //when
         marsRover.runInstructions(instructions);
         //then
