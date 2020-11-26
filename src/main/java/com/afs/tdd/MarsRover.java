@@ -32,6 +32,9 @@ public class MarsRover {
             case "E":
                 this.coordinateX++;
                 break;
+            case "W":
+                this.coordinateX--;
+                break;
         }
     }
 
