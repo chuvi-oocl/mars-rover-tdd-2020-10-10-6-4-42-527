@@ -16,12 +16,16 @@ public class MarsRover {
     }
 
     private void runInstruction(char instruction) {
-        if (instruction == 'M') {
-            move();
-        } else if (instruction == 'L') {
-            turnLeft();
-        } else if (instruction == 'R') {
-            turnRight();
+        switch (instruction) {
+            case 'M':
+                move();
+                break;
+            case 'L':
+                turnLeft();
+                break;
+            case 'R':
+                turnRight();
+                break;
         }
     }
 
