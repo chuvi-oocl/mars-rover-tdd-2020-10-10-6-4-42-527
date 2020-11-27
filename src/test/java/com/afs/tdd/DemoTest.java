@@ -20,7 +20,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_0_1_N_when_run_instructions_given_0_0_S_M() {
+    void should_return_0_negative1_S_when_run_instructions_given_0_0_S_M() {
 
         //given
         String instructions = "M";
@@ -34,7 +34,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_0_1_N_when_run_instructions_given_0_0_E_M() {
+    void should_return_1_0_N_when_run_instructions_given_0_0_E_M() {
 
         //given
         String instructions = "M";
@@ -48,7 +48,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_0_1_N_when_run_instructions_given_0_0_W_M() {
+    void should_return_negative1_0_W_when_run_instructions_given_0_0_W_M() {
 
         //given
         String instructions = "M";
