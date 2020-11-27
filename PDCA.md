@@ -141,3 +141,15 @@ P: 3 mins
 D: 3 mins   
 C: Completed within the time    
 A: Keep on
+
+[0 0 N], [MR] Test   
+P: 3 mins   
+D: 3 mins   
+C: Completed within the time    
+A: Keep on
+
+[0 0 N], [MR] Implementation  
+P: 3 mins   
+D: 3 mins   
+C: Completed within the time    
+A: Keep on

@@ -1,9 +1,15 @@
 package com.afs.tdd;
 
+import command.MarsRoverCommand;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MarsRover {
     private int coordinateX;
     private int coordinateY;
     private String direction;
+    private List<MarsRoverCommand> CommandList = new ArrayList<>();
 
     public MarsRover(int coordinateX, int coordinateY, String direction) {
         this.coordinateX = coordinateX;
@@ -11,73 +17,29 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void runInstructions(String instructions) {
-        instructions.chars().mapToObj(instruction -> (char) instruction).forEach(this::runInstruction);
+    public void moveXPlusOne(){
+        this.coordinateX++;
     }
-
-    private void runInstruction(char instruction) {
-        switch (instruction) {
-            case 'M':
-                move();
-                break;
-            case 'L':
-                turnLeft();
-                break;
-            case 'R':
-                turnRight();
-                break;
-        }
+    public void moveXMinusOne(){
+        this.coordinateX--;
     }
-
-    private void turnRight() {
-        switch (this.direction) {
-            case "N":
-                this.direction = "E";
-                break;
-            case "S":
-                this.direction = "W";
-                break;
-            case "E":
-                this.direction = "S";
-                break;
-            case "W":
-                this.direction = "N";
-                break;
-        }
+    public void moveYPlusOne(){
+        this.coordinateY++;
     }
-
-    private void turnLeft() {
-        switch (this.direction) {
-            case "N":
-                this.direction = "W";
-                break;
-            case "S":
-                this.direction = "E";
-                break;
-            case "E":
-                this.direction = "N";
-                break;
-            case "W":
-                this.direction = "S";
-                break;
-        }
+    public void moveYMinusOne(){
+        this.coordinateY--;
     }
-
-    private void move() {
-        switch (direction) {
-            case "N":
-                this.coordinateY++;
-                break;
-            case "S":
-                this.coordinateY--;
-                break;
-            case "E":
-                this.coordinateX++;
-                break;
-            case "W":
-                this.coordinateX--;
-                break;
-        }
+    public void turnNorth(){
+        this.direction = "N";
+    }
+    public void turnSouth(){
+        this.direction = "S";
+    }
+    public void turnEast(){
+        this.direction = "E";
+    }
+    public void turnWest(){
+        this.direction = "W";
     }
 
     public int getCoordinateX() {
@@ -89,6 +51,21 @@ public class MarsRover {
     }
 
     public String getDirection() {
-        return direction;
+        return this.direction;
+    }
+
+    public void inputCommand(MarsRoverCommand command){
+        CommandList.add(command);
+    }
+
+
+    public void inputCommands(List<MarsRoverCommand> commands){
+        CommandList.addAll(commands);
+    }
+
+    public void executeCommands(){
+        for (MarsRoverCommand command : CommandList) {
+            command.execute();
+        }
     }
 }
